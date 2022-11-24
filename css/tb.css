@@ -1,0 +1,19 @@
+@charset "utf=8";
+/* True Type Font 지정합니다.*/
+@font-face {
+	font-family: "welcome";
+	src: url("../welcome_font/웰컴체\ Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	padding: 0;
+	font-family: "OTWelcomeRA";
+}
+
+a {
+	text-decoration: none;
+	margin: 10px 30px;
+	font-weight: bold;
+	color: #ffffff;
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>남율건설 회원가입</title>
+		<link rel="stylesheet" href="css/paralleax_singup.css" />
+		<script src="javascript/jquery-1.12.3.js"></script>
+		<!-- defer 속성은 script가 잠깐 지연 되도록 하여 -->
+		<!-- HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함 -->
+		<script src="javascript/script.js" defer type="text/javascript"></script>
+		<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="top">
+					<div class="logo">
+						<a href="index.html"
+							><img src="images/logo.png" alt="로고 이미지"
+						/></a>
+					</div>
+					<nav class="menu">
+						<ul class="navi">
+							<li>
+								<a href="#">회사소개</a>
+								<ul class="submenu">
+									<li><a href="#">인사말</a></li>
+									<li><a href="#">조직도</a></li>
+									<li><a href="#">오시는길</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">사업영역</a>
+								<ul class="submenu">
+									<li><a href="#">주택사업</a></li>
+									<li><a href="#">건축사업</a></li>
+									<li><a href="#">인테리어</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">입주정보</a>
+								<ul class="submenu">
+									<li><a href="#">입주단지</a></li>
+									<li><a href="#">입주캘린더</a></li>
+									<li><a href="#">입주모임</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">인재채용</a>
+								<ul class="submenu">
+									<li><a href="#">직무소개</a></li>
+									<li><a href="#">채용공고</a></li>
+									<li><a href="#">기술교육</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<!-- paralleax -->
+			<div class="paralleax_content">
+				<div
+					id="ms1"
+					class="container bg-holder"
+					data-width="1200"
+					data-height="600"
+				>
+					<section class="content">
+						<h3>더 높은 하늘을 향해 : 남율건설</h3>
+						<p>
+							세계의 도시를 건설하는 무한 창조의 꿈을 실현하는 건축사업 <br />
+							더 높은 하늘을 향해, 더 넓은 세계를 향해 계속해서 새로운 세계를
+							건설합니다.
+						</p>
+					</section>
+				</div>
+				<div
+					id="ms2"
+					class="container bg-holder"
+					data-width="1200"
+					data-height="600"
+				>
+					<section class="content">
+						<h3>남율건설과 함께 나아갈</h3>
+						<p>당신을 기다립니다</p>
+					</section>
+				</div>
+			</div>
+			<!-- 회원가입 input 관련 -->
+			<div class="wrap">
+				<div class="title">
+					<h2>회원가입</h2>
+				</div>
+				<form id="joinForm" name="joinForm" action="#" method="post">
+					<fieldset class="required_form">
+						<!-- 회원가입 input 필수입력사항 -->
+						<legend>기본입력</legend>
+						<div class="list_required">
+							<ul>
+								<li>
+									<label for="id"
+										>아이디 :
+										<input
+											type="text"
+											placeholder="아이디를 입력하세요"
+											required="required"
+										/>
+									</label>
+								</li>
+								<li>
+									<label for="pw1"
+										>비밀번호 :
+										<input
+											id="pw1"
+											type="password"
+											placeholder="비밀번호를 입력하세요"
+											required="required"
+									/></label>
+								</li>
+								<li>
+									<label for="pw2"
+										>비밀번호 확인 :
+										<input
+											id="pw2"
+											type="password"
+											placeholder="비밀번호를 다시 입력하세요."
+											required="required"
+									/></label>
+								</li>
+								<li>
+									<label for="name"
+										>이름 :
+										<input
+											type="text"
+											placeholder="이름을 입력하세요."
+											required="required"
+									/></label>
+								</li>
+								<li>
+									<label for="address"
+										>주소 :
+										<input
+											type="text"
+											id="postcode"
+											placeholder="우편번호"
+											required="required"
+									/></label>
+									<input type="text" id="postcode" placeholder="우편번호" />
+									<input
+										type="button"
+										onclick="b_lPostcode()"
+										value="우편번호 찾기"
+									/><br />
+									<input
+										type="text"
+										id="roadAddress"
+										placeholder="도로명주소"
+									/>
+									<input type="text" id="jibunAddress" placeholder="지번주소" />
+									<span id="guide" style="color: #999; display: none"></span>
+									<input
+										type="text"
+										id="detailAddress"
+										placeholder="상세주소"
+										required="required"
+									/>
+									<input type="text" id="extraAddress" placeholder="참고항목" />
+								</li>
+							</ul>
+						</div>
+					</fieldset>
+					<!-- 회원가입 input 필수입력사항 -->
+					<fieldset class="choice_form">
+						<legend>선택입력</legend>
+						<ul class="list_choice">
+							<li>
+								<label for="file">프로필사진 : <input type="file" /></label>
+							</li>
+							<li>
+								<label for="gender"
+									>성별 : 여성
+									<input type="radio" name="gender" checked="checked" />남성
+									<input type="radio" name="gender"
+								/></label>
+							</li>
+							<li>
+								<label for="email"
+									>이메일 : <input type="email" name="email" autocomplete="on"
+								/></label>
+							</li>
+							<li>
+								<p>
+									핸드폰번호 :
+									<select id="hp" title="휴대폰 앞자리 선택">
+										<option>선택</option>
+										<option selected="selected">010</option>
+										<option>011</option>
+									</select>
+									<input
+										type="tel"
+										id="tel"
+										pattern="\d{3,4}-\d{4}"
+										title="휴대폰번호 숫자3자리에서 4자리-숫자 4자리 입력"
+									/>
+								</p>
+							</li>
+							<li>
+								<label for="friend"
+									>추천인 아이디 : <input type="text"
+								/></label>
+							</li>
+							<li>
+								<label for="date"
+									>생일 : <input type="date" /> 양력<input
+										type="radio"
+										name="birthday"
+										checked="checked" />음력<input type="radio" name="birthday"
+								/></label>
+							</li>
+							<li>
+								<label for="color"
+									>좋아하는 색깔 :
+									<input type="color" id="favcolor" value="#ff8d8d"
+								/></label>
+							</li>
+							<li>
+								<label for="url"
+									>SNS주소 : <input type="url" name="url" id="rul"
+								/></label>
+							</li>
+							<li>
+								<p>
+									가입경로 :
+									<select id="root">
+										<option value=""></option>
+										<option>광고</option>
+										<option>지인소개</option>
+										<option>인터넷(블로그,카페)</option>
+										<option>검색</option>
+										<option>기타</option>
+									</select>
+								</p>
+							</li>
+							<li>
+								<label for="goal"
+									>가입목적 : <br /><textarea cols="50" rows="10"></textarea>
+								</label>
+							</li>
+							<li>
+								<label for=""
+									>관심분야 : <br />
+									<span>
+										<input type="checkbox" value="패션" name="chk1" />패션
+										<input type="checkbox" value="여행" name="chk2" />여행
+										<input type="checkbox" value="미용" name="chk3" />미용
+										<input type="checkbox" value="맛집" name="chk4" />맛집
+										<input type="checkbox" value="운동" name="chk5" />운동
+										<input type="checkbox" value="독서" name="chk6" />독서
+										<input type="checkbox" value="원예" name="chk7" />원예
+										<input type="checkbox" value="결혼" name="chk8" />결혼
+									</span></label
+								>
+							</li>
+							<p class="age">*14세 이상입니다. <strong>(필수)</strong></p>
+							<br />
+							<p class="footer">
+								*회원가입에 필요한 최소한의 정보만 입력 받음으로써 고객님의
+								개인정보 수집을 최소화하고 편리한 회원가입을 제공합니다.
+							</p>
+						</ul>
+					</fieldset>
+
+					<p class="join">
+						<input type="submit" value="가입하기" onclick="return pwcf()" />
+					</p>
+					<p class="reset"><input type="reset" value="다시작성" /></p>
+				</form>
+			</div>
+			<footer>
+				<div class="copy">
+					<img src="images/website_icon.svg" alt="웹사이트" /> COPYRIGHT © by
+					WEBDESIGN. ALL RIGHTS RESERVED
+				</div>
+
+				<div class="site">
+					<div class="btmenu">
+						<ul>
+							<li><a href="paralleax_singup.html">회원가입</a></li>
+							<li><a href="about_videos.html">회사소개영상</a></li>
+							<li><a href="vegas_main.html">건축영상</a></li>
+						</ul>
+					</div>
+					<div class="familysite">
+						<select name="sitelist">
+							<option value="#">패밀리사이트1</option>
+							<option value="#">패밀리사이트2</option>
+							<option value="#">패밀리사이트3</option>
+						</select>
+					</div>
+				</div>
+			</footer>
+
+			<script src="javascript/jquery.parallax-scroll.min.js"></script>
+			<script>
+				$(function () {
+					//브라우저 창의 크기를 조절했을때 내용 전체가 브라우저 창의 너비와 높이가 딱맞게 표시되도록 jQuery를 사용해 브라우저 창의 크기를 알아낸 후 현재 문서의 너비와 높이로 지정해야합니다. 그러면, 섹션이 화면에 가득차게 만드는 효과구현이 가능합니다.
+					$(window).resize(function () {
+						$(".container").width($(window).width()).height($(window).height());
+					});
+
+					setTimeout(function () {
+						$(window).resize();
+					}, 1000);
+
+					//.bg-holder 요소에서 paralloxScroll을 실행합니다.
+
+					$(".bg-holder").parallaxScroll({
+						//parallax-scroll 플러그인의 옵션릉 friction 옵션 하나뿐입니다. 이 옵션 값은 0에서 1사이의 소수로 표시하는데, 0이면 배경 이미지가 콘텐츠를 따라 스크롤이 되고, 1이면 배경이 완전히 고정되어 콘텐츠만 스크롤 합니다. 0과 1사이의 값을 적절히 사용하면 콘텐츠와 배경의 스크롤 속도를 다르게 해서 페럴렉스 효과를 낼 수 있습니다.
+						friction: 0.3,
+					});
+				});
+				// 비밀번호 재확인 기능 입니다.
+				function pwcf() {
+					var pw = document.getElementById("pw1").value;
+					var rpw = document.getElementById("pw2").value;
+					if (pw !== rpw) {
+						alert("비밀번호가 일치하지 않습니다");
+						return false;
+					}
+				}
+				// 다음 주소 APi 입니다.
+				function b_lPostcode() {
+					new daum.Postcode({
+						oncomplete: function (data) {
+							var roadAddr = data.roadAddress;
+							var extraRoadAddr = "";
+							if (data.bname !== "" && /[동|로|가]$/g.test(data.bname)) {
+								extraRoadAddr += data.bname;
+							}
+							if (data.buildingName !== "" && data.apartment === "Y") {
+								extraRoadAddr +=
+									extraRoadAddr !== ""
+										? ", " + data.buildingName
+										: data.buildingName;
+							}
+							if (extraRoadAddr !== "") {
+								extraRoadAddr = " (" + extraRoadAddr + ")";
+							}
+							document.getElementById("postcode").value = data.zonecode;
+							document.getElementById("roadAddress").value = roadAddr;
+							document.getElementById("jibunAddress").value = data.jibunAddress;
+							if (roadAddr !== "") {
+								document.getElementById("extraAddress").value = extraRoadAddr;
+							} else {
+								document.getElementById("extraAddress").value = "";
+							}
+							var guideTextBox = document.getElementById("guide");
+							if (data.autoRoadAddress) {
+								var expRoadAddr = data.autoRoadAddress + extraRoadAddr;
+								guideTextBox.innerHTML =
+									"(예상 도로명 주소 : " + expRoadAddr + ")";
+								guideTextBox.style.display = "block";
+							} else if (data.autoJibunAddress) {
+								var expJibunAddr = data.autoJibunAddress;
+								guideTextBox.innerHTML =
+									"(예상 지번 주소 : " + expJibunAddr + ")";
+								guideTextBox.style.display = "block";
+							} else {
+								guideTextBox.innerHTML = "";
+								guideTextBox.style.display = "none";
+							}
+						},
+					}).open();
+				}
+			</script>
+		</div>
+	</body>
+</html>

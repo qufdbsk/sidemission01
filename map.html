@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>찾아오시는길</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/jquery.bxslider.min.css" />
+		<link rel="stylesheet" href="css/map.css" />
+		<script src="javascript/jquery-1.12.3.js"></script>
+		<script src="javascript/jquery.bxslider.min.js"></script>
+
+		<!-- defer 속성은 script가 잠깐 지연 되도록 하여 -->
+		<!-- HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함 -->
+		<script src="javascript/script.js" defer type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="top">
+					<div class="logo">
+						<a href="index.html"
+							><img src="images/logo.png" alt="로고 이미지"
+						/></a>
+					</div>
+					<nav class="menu">
+						<ul class="navi">
+							<li>
+								<a href="#">회사소개</a>
+								<ul class="submenu">
+									<li><a href="#">인사말</a></li>
+									<li><a href="#">조직도</a></li>
+									<li><a href="#">오시는길</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">사업영역</a>
+								<ul class="submenu">
+									<li><a href="#">주택사업</a></li>
+									<li><a href="#">건축사업</a></li>
+									<li><a href="#">인테리어</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">입주정보</a>
+								<ul class="submenu">
+									<li><a href="#">입주단지</a></li>
+									<li><a href="#">입주캘린더</a></li>
+									<li><a href="#">입주모임</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">인재채용</a>
+								<ul class="submenu">
+									<li><a href="#">직무소개</a></li>
+									<li><a href="#">채용공고</a></li>
+									<li><a href="#">기술교육</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<div class="locationh1"><h1>남율건설 찾아오시는길</h1></div>
+			<div class="location_text">
+				L&nbsp;O&nbsp;C&nbsp;A&nbsp;T&nbsp;I&nbsp;O&nbsp;N
+			</div>
+			<!-- 카카오 지도 APi #map -->
+			<div id="map" style="width: 700px; height: 350px"></div>
+			<div class="map_img">
+				<img src="images/map.PNG" alt="남율건설본사이미지" />
+			</div>
+			<!-- bxSlider 적용 될 이미지 -->
+			<div id="gallery_wrap">
+				<ul class="slide_gallery">
+					<li><img src="images/pexels1.jpg" alt="이미지1" width="800px" /></li>
+					<li><img src="images/pexels2.jpg" alt="이미지2" width="800px" /></li>
+					<li><img src="images/pexels3.jpg" alt="이미지3" width="800px" /></li>
+					<li><img src="images/pexels4.jpg" alt="이미지4" width="800px" /></li>
+				</ul>
+			</div>
+			<div class="fo_text">
+				<h1>남율건설</h1>
+				<span>가장 높은 하늘로 올라가는 남율건설 찾아오시는방법</span>
+			</div>
+
+			<div class="load">
+				<p>■ 대중교통으로 오시는방법</p>
+				<span>버스 : 341번,370번,3321번</span>
+				<p>■ 자가용으로 오시는방법</p>
+				<span
+					>상일IC에서 천호대교,하남방면-강일동방면 우회전-첨단업무단지방면
+					우회전</span
+				>
+			</div>
+
+			<footer>
+				<div class="copy">
+					<img src="images/website_icon.svg" alt="웹사이트" /> COPYRIGHT © by
+					WEBDESIGN. ALL RIGHTS RESERVED
+				</div>
+
+				<div class="site">
+					<div class="btmenu">
+						<ul>
+							<li><a href="paralleax_singup.html">회원가입</a></li>
+							<li><a href="about_videos.html">회사소개영상</a></li>
+							<li><a href="vegas_main.html">건축영상</a></li>
+						</ul>
+					</div>
+					<div class="familysite">
+						<select name="sitelist">
+							<option value="#">패밀리사이트1</option>
+							<option value="#">패밀리사이트2</option>
+							<option value="#">패밀리사이트3</option>
+						</select>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- 카카오 지도 APi 관련 script -->
+		<script
+			type="text/javascript"
+			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	1478c56b5329aa0b6f2f956ea428a1e1"
+		></script>
+		<script>
+			var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+				mapOption = {
+					center: new kakao.maps.LatLng(37.54891473656283, 127.1753608885892), // 지도의 중심좌표
+					level: 3, // 지도의 확대 레벨
+				};
+
+			var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+			// 마커가 표시될 위치입니다
+			var markerPosition = new kakao.maps.LatLng(
+				37.54891473656283,
+				127.1753608885892
+			);
+
+			// 마커를 생성합니다
+			var marker = new kakao.maps.Marker({
+				position: markerPosition,
+			});
+
+			// 마커가 지도 위에 표시되도록 설정합니다
+			marker.setMap(map);
+
+			// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+			// marker.setMap(null);
+
+			$(function () {
+				$(".slide_gallery").bxSlider({
+					auto: true, //자동으로 애니메이션 시작
+					autoControls: true, //시작 및 중지버튼 표시
+					speed: 500, // 애니메이션 전환 속도 설정(500=500ms=0.5s=0.5초)
+					pause: 1000, // 애니메이션 유지 시간(1000 = 1000ms = 1s =1 초)
+					stopAutoOnClick: true, // 이전(<) 또는 다음(>) 버튼을 누르면 슬라이드가 정지함
+					pager: true, // 페이지 표시 보여짐
+				});
+			});
+		</script>
+	</body>
+</html>

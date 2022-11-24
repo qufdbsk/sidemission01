@@ -1,0 +1,293 @@
+@charset "utf-8";
+/* True Type Font 지정합니다.*/
+@font-face {
+	font-family: "welcome";
+	src: url("../welcome_font/웰컴체\ Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	color: #333333;
+	font-family: "OTWelcomeRA";
+}
+
+body {
+	width: 2000px;
+	background-color: #ffffff;
+	font-size: 20px;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+}
+
+.wrapper {
+	/* display: none; */
+}
+
+header {
+	/* 상단 높이 */
+	height: 100px;
+	/* 상단 너비 */
+	width: 1000px;
+}
+
+.top {
+	/* 상단 로고와 메뉴가 들어가는 곳 높이 */
+	height: 100px;
+	/* 상단 로고와 메뉴가 들어가는 곳 너비 */
+	width: 1000px;
+}
+
+/* 로고 영역 스타일 적용 */
+.logo {
+	float: left;
+	/* 로고 영역 높이 */
+	height: 100px;
+	/* 로고 영역 너비 */
+	width: 180px;
+}
+
+.logo img {
+	float: left;
+	height: 40px;
+	width: 150px;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+
+.menu {
+	float: left;
+	height: 100px;
+	width: 800px;
+	z-index: 1;
+}
+
+.navi {
+	float: right;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+.navi > li {
+	float: left;
+}
+
+.navi > li > a {
+	height: 40px;
+	width: 180px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #0066ad;
+	color: #ffffff;
+}
+
+.navi > li > a:hover {
+	background-color: #30a3f3;
+}
+
+.submenu {
+	width: 180px;
+	position: absolute;
+	display: none;
+	z-index: 1;
+}
+
+.submenu > li > a {
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #ababab;
+	color: #ffffff;
+}
+
+.submenu > li > a:hover {
+	background-color: #30a3f3;
+}
+
+.container {
+	position: relative;
+	min-height: 730px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	margin: 0;
+}
+/* paralleax 에 사용 될 이미지 url 지정합니다. */
+#ms1 {
+	background-image: url(../images/pexels1.jpg);
+}
+#ms2 {
+	background-image: url(../images/pexels2.jpg);
+}
+#ms3 {
+	background-image: url(../images/pexels3.jpg);
+}
+
+.bg-holder {
+	width: 100%;
+	height: 100%;
+}
+
+.container .content {
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+}
+
+.content h3 {
+	color: rgb(255, 255, 255);
+	font-size: 50px;
+	text-align: center;
+}
+
+.content p {
+	margin-top: 12px;
+	padding-left: 5px;
+	padding-right: 5px;
+	line-height: 140%;
+	font-size: 24px;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.363);
+	padding-top: 10px;
+}
+
+.title {
+	margin: 50px;
+}
+.title h2 {
+	padding: 30px;
+	text-align: center;
+	font-size: 30px;
+	background-color: rgba(83, 83, 83, 0.212);
+	width: 200px;
+	margin: 0 auto;
+}
+
+.required_form {
+	margin: auto;
+	margin-bottom: 20px;
+	padding: 30px;
+	width: 1100px;
+}
+
+.list_required ul li {
+	list-style: none;
+	padding: 5px;
+}
+
+.choice_form {
+	margin: auto;
+	margin-bottom: 20px;
+	padding: 30px;
+	width: 1100px;
+}
+
+.choice_form ul li {
+	list-style: none;
+	padding: 5px;
+}
+
+.join input {
+	background-color: rgba(114, 114, 114, 0.24);
+	border: 2px solid #f8f8f8;
+	width: 500px;
+	padding: 10px 20px;
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	justify-content: center;
+	margin: auto;
+}
+.reset input {
+	background-color: rgba(114, 114, 114, 0.24);
+	border: 2px solid #f8f8f8;
+	width: 500px;
+	padding: 10px 20px;
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	justify-content: center;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+footer {
+	/* 하단 높이 */
+	height: 100px;
+	/* 하단 너비 */
+	width: 1000px;
+	background-color: #48487d;
+}
+
+.copy {
+	float: left;
+	/* Copyright 높이 */
+	height: 100px;
+	/* Copyright 너비 */
+	width: 500px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 100px;
+	color: #ffffff;
+}
+
+.copy img {
+	vertical-align: middle;
+}
+
+.site {
+	float: right;
+	height: 100px;
+	width: 500px;
+}
+
+.btmenu {
+	float: right;
+	height: 50px;
+	width: 300px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+}
+
+.btmenu li > a {
+	float: left;
+	width: 100px;
+	display: inline;
+	color: #ffffff;
+}
+
+.btmenu li > a:hover {
+	font-weight: bold;
+}
+
+.familysite {
+	float: right;
+	/* 패밀리 사이트 높이(site 높이의 1/2) */
+	height: 50px;
+	/* 패밀리 사이트 너비 */
+	width: 300px;
+}
+
+.familysite select {
+	float: right;
+	height: 30px;
+	width: 280px;
+	margin-right: 10px;
+	font-size: 14px;
+}

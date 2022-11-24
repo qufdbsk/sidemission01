@@ -1,0 +1,434 @@
+@charset "utf-8";
+/* True Type Font 지정합니다.*/
+@font-face {
+	font-family: "welcome";
+	src: url("../welcome_font/웰컴체\ Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	color: #333333;
+	font-family: "OTWelcomeRA";
+}
+
+body {
+	width: 1000px;
+	background-color: #ffffff;
+	font-size: 20px;
+	/* border: 1px solid red; */
+}
+
+input {
+	vertical-align: middle;
+}
+#notice_wrap {
+	width: 300px;
+	position: absolute;
+	z-index: 1;
+	left: 150px;
+	top: 100px;
+	box-shadow: 0 0 5px #000;
+}
+
+.mojatext {
+	height: 50px;
+	width: 100px;
+	position: absolute;
+	left: 30%;
+	top: 40%;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+	line-height: 60px;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+#notice_wrap label {
+	color: #f7f5f5c4;
+	font-size: 15px;
+}
+.closewrap {
+	background-color: #000;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 5px 10px;
+}
+.closeBtn {
+	margin-left: 20px;
+	cursor: pointer;
+	height: 25px;
+	line-height: 25px;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+}
+
+.wrapper {
+	/* display: none; */
+}
+
+/* 레이어 팝업창(#modal) 배경 스타일 적용 */
+#modal {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+	display: none;
+}
+
+#modal.active {
+	display: block;
+}
+
+/* 레이어 팝업창 스타일 적용 */
+.modal_up {
+	width: 500px;
+	height: 400px;
+	position: fixed;
+	left: 30%;
+	top: 20%;
+	background-color: #ffffff;
+}
+
+.uptitle {
+	margin-top: 30px;
+	text-align: center;
+	line-height: 16px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.upbody {
+	padding: 30px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.btn {
+	height: 25px;
+	width: 100px;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 3px;
+	background: #fabd43;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+header {
+	/* 상단 높이 */
+	height: 100px;
+	/* 상단 너비 */
+	width: 1000px;
+}
+
+/* .logo와 .menu를 묶어줌 */
+.top {
+	/* 상단 로고와 메뉴가 들어가는 곳 높이 */
+	height: 100px;
+	/* 상단 로고와 메뉴가 들어가는 곳 너비 */
+	width: 1000px;
+}
+
+/* 로고 영역 스타일 적용 */
+.logo {
+	float: left;
+	/* 로고 영역 높이 */
+	height: 100px;
+	/* 로고 영역 너비 */
+	width: 180px;
+}
+
+.logo img {
+	float: left;
+	height: 40px;
+	width: 150px;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+
+.menu {
+	float: left;
+	height: 100px;
+	width: 800px;
+	z-index: 1;
+}
+
+.navi {
+	float: right;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+.navi > li {
+	float: left;
+}
+
+.navi > li > a {
+	height: 40px;
+	width: 180px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #0066ad;
+	color: #ffffff;
+}
+
+.navi > li > a:hover {
+	background-color: #30a3f3;
+}
+
+.submenu {
+	width: 180px;
+	position: absolute;
+	display: none;
+	z-index: 1;
+}
+
+.submenu > li > a {
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #ababab;
+	color: #ffffff;
+}
+
+.submenu > li > a:hover {
+	background-color: #30a3f3;
+}
+
+/* .imgslide와 .contents 묶어줌 */
+.bodywrap {
+	/* .imgslide 높이 300px + .contents 높이 200px */
+	height: 500px;
+	/* .imgslide 너비, contents 너비; */
+	width: 1000px;
+}
+
+.imgslide {
+	/* 이미지 슬라이드 높이 */
+	height: 300px;
+	/* 이미지 슬라이드 너비 */
+	width: 1000px;
+	/* 이미지 슬라이드 영역 제한 */
+	position: relative;
+	/* 영역 밖으로 보이지 않도록 제한 */
+	overflow: hidden;
+}
+
+.imgslide > a {
+	display: block;
+	position: absolute;
+}
+
+.contents {
+	/* 콘텐츠(공지사항 notice, 갤러리 gallery, 바로가기 shortcut) 높이 */
+	height: 200px;
+	/* 콘텐츠(공지사항 notice, 갤러리 gallery, 바로가기 shortcut) 너비 */
+	width: 1000px;
+}
+
+.notice {
+	float: left;
+	height: 180px;
+	width: 390px;
+	margin-top: 10px;
+}
+
+.tab {
+	float: left;
+	width: 400px;
+}
+
+.tab h4 {
+	float: left;
+	height: 20px;
+	width: 120px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #fabd43;
+}
+
+.notice > div {
+	width: 390px;
+	border-bottom-color: #fabd43;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+/* 공지사항(.notice) 콘텐츠 영역 스타일 적용 */
+.notice li {
+	float: left;
+	height: 38px;
+	width: 390px;
+	line-height: 38px;
+	font-size: 14px;
+}
+
+.notice li span {
+	float: right;
+}
+
+/* 공지사항(.notice) 2배수(2n) 요소 배경 스타일 적용 */
+.notice li:nth-child(2n) {
+	background-color: #fabd43;
+}
+
+/* 공지사항(.notice) 콘텐츠에 마우스를 올릴 때 스타일 적용 */
+.notice li:hover {
+	font-weight: bold;
+}
+
+.gallery {
+	float: left;
+	height: 180px;
+	width: 390px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.gallery > div {
+	width: 390px;
+	border-bottom-color: #fabd43;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+/* 갤러리(.gallery) 콘텐츠 영역 스타일 적용 */
+.gallery li {
+	float: left;
+	margin-top: 10px;
+	margin-left: 4px;
+}
+
+/* 갤러리(.gallery) 콘텐츠 이미지 영역 스타일 적용 */
+.gallery img {
+	height: 145px;
+	width: 125px;
+}
+
+/* 갤러리(.gallery) 콘텐츠에 마우스를 올릴 때 스타일 적용 */
+.gallery li:hover {
+	opacity: 0.5;
+}
+
+.shortcut {
+	float: right;
+	height: 180px;
+	width: 200px;
+	margin-top: 10px;
+}
+
+.shortcut img {
+	float: right;
+	height: 180px;
+	width: 200px;
+}
+
+.sctext {
+	float: right;
+	height: 30px;
+	width: 100px;
+	position: absolute;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	line-height: 30px;
+	background-color: rgba(40, 40, 40, 0.5);
+	margin-top: 80px;
+	margin-left: 50px;
+}
+
+.sctext:hover {
+	opacity: 0.5;
+}
+
+footer {
+	/* 하단 높이 */
+	height: 100px;
+	/* 하단 너비 */
+	width: 1000px;
+	background-color: #48487d;
+}
+
+.copy {
+	float: left;
+	/* Copyright 높이 */
+	height: 100px;
+	/* Copyright 너비 */
+	width: 500px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 100px;
+	color: #ffffff;
+}
+
+.copy img {
+	vertical-align: middle;
+}
+
+/* .btmenu와 .familysite 묶어줌 */
+.site {
+	float: right;
+	/* 하단 메뉴(.btmenu)와 패밀리 사이트(.familysite) 들어가는 곳 높이 */
+	height: 100px;
+	/* 하단 메뉴(.btmenu)와 패밀리 사이트(.familysite) 들어가는 곳 너비 */
+	width: 500px;
+}
+
+.btmenu {
+	float: right;
+	/* 하단 메뉴 높이(site 높이의 1/2) */
+	height: 50px;
+	/* 하단 메뉴 너비 */
+	width: 300px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+}
+
+.btmenu li > a {
+	float: left;
+	width: 100px;
+	display: inline;
+	color: #ffffff;
+}
+
+.btmenu li > a:hover {
+	font-weight: bold;
+}
+
+.familysite {
+	float: right;
+	/* 패밀리 사이트 높이(site 높이의 1/2) */
+	height: 50px;
+	/* 패밀리 사이트 너비 */
+	width: 300px;
+}
+
+.familysite select {
+	float: right;
+	height: 30px;
+	width: 280px;
+	margin-right: 10px;
+	font-size: 14px;
+}

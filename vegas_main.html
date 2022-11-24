@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <!-[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]--> 
+    <title>남율건설</title>
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/vg.css">
+</head>
+<body>
+    <div id="content">
+        <h1>
+            남율건설
+        </h1>
+        <p>
+            <strong>
+                <a href="http://vegas.jaysalvat.com"></a>
+            </strong>
+            이제 더 큰 미래를 향해 남율건설 건설부문은 <br> 또다시 새로운 세계를 건설할 것입니다.
+        </p>
+    </div>
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="javascript/vegas.min.js"></script>
+    <script >
+        $(document).ready(function() {
+            $('body').vegas({
+            slides: [
+                {  
+            video: {
+                //src 속성을 사용해 동영상 지정해줌
+                src: [
+                    'Pexels_Videos.mp4' ],
+                //loop 속성을 사용해 동영상 반복 여부 지정함
+                loop: true,
+                //동영상 무음상태(음소거 상태)로 만들어줌
+                mute: true
+            }
+        }
+    ]
+
+        });
+    });
+    </script>
+
+</body>
+</html>

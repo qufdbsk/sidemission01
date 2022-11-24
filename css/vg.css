@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Nanum+Gothic:wght@700&family=Oswald&display=swap");
+/* True Type Font 지정합니다.*/
+@font-face {
+	font-family: "welcome";
+	src: url("../welcome_font/웰컴체\ Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+#content {
+	position: absolute;
+	left: 5%;
+	top: 40%;
+	margin-right: 50px;
+	padding: 30px 50px;
+	background: rgba(202, 202, 202, 0.623);
+}
+
+h1 {
+	color: white;
+	font-size: 3em;
+	font-family: "SANGJUGyeongcheonIsland";
+	text-shadow: 3px 1px 2px black;
+}
+
+p {
+	padding-top: 20px;
+	color: rgb(0, 0, 0);
+	font-family: "SANGJUGyeongcheonIsland";
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 2em;
+	text-shadow: 3px 1px 1px rgb(255, 255, 255);
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: white;
+}

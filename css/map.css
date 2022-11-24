@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* True Type Font 지정합니다.*/
+@font-face {
+	font-family: "welcome";
+	src: url("../welcome_font/웰컴체\ Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.locationh1 h1 {
+	margin: 20px;
+	padding: 20px;
+	font-size: 30px;
+}
+
+.location_text {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.993);
+	font-size: 12px;
+	margin: 8px 0px;
+	padding: 30px;
+}
+
+/* 가상요소 before,after 활용하여  .location_text 앞 뒤로 선을 그어줍니다.*/
+.location_text::before,
+.location_text::after {
+	content: "";
+	flex-grow: 1;
+	background: rgba(0, 0, 0, 0.979);
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 16px;
+}
+
+#map {
+	padding: 50px;
+}
+
+.map_img {
+	text-align: center;
+	margin: 50px;
+}
+.map_img img {
+	margin: 0 auto;
+	width: 800px;
+}
+
+#gallery_wrap {
+	width: 800px;
+}
+.slide_gallery {
+	width: 800px;
+}
+
+.fo_text {
+	margin: 10px;
+	padding: 30px;
+	font-size: 15px;
+}
+.fo_text span {
+	line-height: 20px;
+}
+
+.load {
+	margin: 10px;
+	padding: 30px;
+	margin-bottom: 20px;
+}
+
+.load p {
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.load span {
+	font-size: 15px;
+	color: gray;
+}

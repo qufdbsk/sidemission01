@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사소개 영상</title>
+    <link rel="stylesheet" href="css/tb.css">
+</head>
+<body>
+    <div id="wrapper">
+        <a href="#" class="tubular-play">재생</a>
+        <a href="#" class="tubular-pause">일시정지</a>
+        <a href="#" class="tubular-volume-up">소리 키우기</a>
+        <a href="#" class="tubular-volume-down">소리 줄이기</a>
+        <a href="#" class="tubular-mute">소리 끄기</a>
+    </div>
+
+   
+
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="javascript/jquery.tubular.1.0.js"></script>
+    <script>
+        $('document').ready(function() {
+        var options = { videoId: 'AXtAI6ZL-Qk', mute:true
+    };
+        $('#wrapper').tubular(options);
+        
+        
+        });
+    </script>
+</body>
+</html>
